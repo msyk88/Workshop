@@ -1,0 +1,179 @@
+---
+title: ""
+output:
+  html_document:
+    df_print: paged
+---
+
+
+<div class="header">
+<h2 style="color: white; background-color: #0080ff;"><br/>&nbsp; Interactive Report in R <br/>&nbsp; Jan 2019 <br/>&nbsp; <br/> </h2>
+<p>&nbsp;</p>
+</div>
+
+## Load Data - csv
+
+<br>
+
+```{r load_data_csv}
+
+# load data from csv
+
+
+
+```
+
+<br>
+
+## Load Data - xlsx
+
+<br>
+
+```{r load_data_xlsx}
+
+## load data from xls
+# library(XLConnect)
+# wb1 <- loadWorkbook("sample.xlsx")
+# sample_data <- readWorksheet(wb1,'Sheet1')
+
+```
+
+
+<br>
+
+## View data 
+
+View the whole dataset: 
+
+```{r view}
+
+
+
+```
+
+
+<br>
+
+View first lines of data: 
+
+```{r view_head}
+
+
+
+```
+
+<br>
+
+View the data in a nice way: 
+
+```{r, view_data_table}
+#install.packages('DT')
+
+
+
+```
+
+<br>
+
+## Data wrangling 
+
+<br>
+
+### Load needed library
+
+Note: Install package before first use.
+
+```{r load_library, message=FALSE, warning=FALSE}
+#install.packages('dplyr')
+
+
+```
+
+
+Handy cheatsheet [data wrangling](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+
+<br>
+
+### Aggregate data by Country 
+
+
+```{r aggregated}
+
+
+```
+
+<br>
+
+## Plot results on the map
+
+<br>
+
+### Load libraries
+
+Note: Install package before first use.
+
+```{r plot_load_libraries, message=FALSE, warning=FALSE}
+
+#install.packages(c('plotly','countrycode','DT'))
+
+
+
+```
+
+<br>
+
+### prepare table 
+
+```{r input_table}
+
+
+
+```
+
+<br>
+
+### plot map
+
+<br>
+
+```{r plot_map, fig.align='center', fig.height=7, fig.width=9}
+## settings for plot (optional)
+g <- list(showframe = FALSE,
+          showcoastlines = TRUE,
+          showland = TRUE,
+          landcolor = "white",
+          coastlinewidth = 0.5,
+          coastlinecolor = toRGB("grey"),
+          projection = list(type = "Mercator"))
+
+
+
+# create plot
+
+  
+
+
+```
+
+<br>
+
+### Helpful links
+
+
+<p> [R Markdown](http://rmarkdown.rstudio.com) </p>
+
+<p> [dplyr](http://dplyr.tidyverse.org/reference/index.html) </p>
+
+<p> [RStudio cheatsheets](https://www.rstudio.com/resources/cheatsheets/) </p>
+
+<p> [Graphical library - plotly](https://plot.ly/r/) </p>
+
+<p> [Dashboards](https://rmarkdown.rstudio.com/flexdashboard/) </p>
+
+<p> [Data tables](https://rstudio.github.io/DT/) </p>
+
+<footer >
+<img src="logo_Refinitiv.png" alt="logo" align="right" />
+</footer>
+
+
